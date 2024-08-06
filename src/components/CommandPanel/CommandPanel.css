@@ -1,0 +1,117 @@
+.terminal-container {
+    background: #0a1704;
+    border-radius: 1em;
+    box-shadow: 0 .5em 1em 1em rgba(0, 0, 0, .5);
+    font-family: monaco, Consolas, Lucida Console, monospace;
+    width: 40vw;
+    max-width: 40vw;
+}
+.terminal-header {
+    background: #000;
+    border-radius: 1em 1em 0 0;
+}
+.terminal-header .terminal-header-buttons {
+    padding: .5em 1em;
+}
+.terminal-header .terminal-header-buttons .terminal-button {
+    width: .75em;
+    height: .75em;
+    border-radius: 1em;
+    margin-right: .5em;
+}
+.terminal-header-buttons .terminal-button.close {
+    background: #ff4746;
+    border: 1px solid #b81717;
+    position: relative;
+}
+.terminal-header-buttons .terminal-button.minimise {
+    background: #ffbe00;
+    border: 1px solid #aa7813;
+}
+.terminal-header-buttons .terminal-button.expand {
+    background: #00db47;
+    border: 1px solid #0d791f;
+}
+
+.terminal-body {
+    padding: 1em;
+    color: #0d339d;
+    height: 50vh;
+    min-height: 30em;
+    overflow: hidden;
+}
+.terminal-body .has-text-weight-bold {
+    color: #1142cc;
+    font-weight: 600;
+}
+.is-rainbow-red {
+    color: red;
+}
+.is-rainbow-orange {
+    color: #ff7f00;
+}
+.is-rainbow-yellow {
+    color: #ff0;
+}
+.is-rainbow-green {
+    color: #0f0;
+}
+.is-rainbow-blue {
+    color: #00f;
+}
+.is-rainbow-violet {
+    color: indigo;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 2px 0 2px 0;
+}
+li:not(:last-child) { 
+    margin-bottom: 1em;  
+}
+.terminal-control {
+    color: #0d339d;
+}
+.control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: inherit;
+}
+.terminal-control .terminal-input {
+    color: #f45bee;
+}
+.terminal-input .field .control.has-icons-left .icon {
+    color: #f45bee;
+    height: auto;
+    width: auto;
+}
+.control.has-icons-left .icon.is-left {
+    left: 0;
+}
+.terminal-input .field .cursor {
+    display: none;
+    background: #0d339d;
+    width: .5em;
+    height: 1.2em;
+    animation: flash 1s infinite;
+    position: absolute;
+    top: .25em;
+    /* left: 1em; */
+}
+.input {
+    background: transparent;
+    border: none;
+    padding-top: 0;
+    padding-left: 1em;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+    color: #0d339d;
+    caret-color: transparent;
+    width:calc(100% - 4em);
+    height:3em;
+}
+input:focus {
+    outline: none;
+}
