@@ -31,6 +31,7 @@ function Landing() {
             <div className='p'>
               <div className='flex align-center'>
                 <div className='circle text-safe-glow blink mr'></div>
+                <div></div>
                 <div className='text-white recruitment-notifier'>Still Looking</div>
               </div>
                 <CommandPanel />
