@@ -36,6 +36,12 @@ function CommandPanel() {
                     </div>
                 </div>
             </div>
+            <nav className='terminal-tmux-bar'>
+                <div className='screen'>0</div>
+                <div className='bar'>zsh</div>
+                <div className='battery'>98%</div>
+                <div className='name'>Saurav's Laptop</div>
+            </nav>
         </div>
     )
 }

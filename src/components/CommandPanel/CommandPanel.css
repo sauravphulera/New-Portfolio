@@ -115,3 +115,32 @@ li:not(:last-child) {
 input:focus {
     outline: none;
 }
+.terminal-tmux-bar {
+    background: #3d65d3;
+    border-radius: 0 0 1em 1em;
+    display: flex;
+    flex-direction: row;
+    color: #0d339d;
+    font-size: .8em;
+}
+
+.terminal-tmux-bar .screen {
+    border-bottom-left-radius: 1em;
+    padding-left: 1em;
+}
+.terminal-tmux-bar .screen, .terminal-tmux-bar .name, .terminal-tmux-bar .bar,.terminal-tmux-bar .battery{
+    padding: .5em;
+}
+.terminal-tmux-bar .name, .terminal-tmux-bar .screen {
+    background: #f45bee;
+}
+.terminal-tmux-bar .battery {
+    background: #0a1704;
+}
+.terminal-tmux-bar .name {
+    border-bottom-right-radius: 1em;
+    padding-right: 1em;
+}
+.terminal-tmux-bar .bar {
+    flex-grow: 10;
+}

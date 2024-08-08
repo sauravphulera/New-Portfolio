@@ -7,7 +7,7 @@ function Landing() {
         <div className='container flex'>
 
           {/* phone container */}
-            <div>
+            <div className='flex align-end'>
               <div className='phone'>
                   <div className='inner-screen flex align-center flex-col'>
                     <div className='speaker'></div>
@@ -29,9 +29,10 @@ function Landing() {
 
             {/* command side */}
             <div className='p'>
+            <div className='text text-white'>Recruitment Status</div>
+
               <div className='flex align-center'>
                 <div className='circle text-safe-glow blink mr'></div>
-                <div></div>
                 <div className='text-white recruitment-notifier'>Still Looking</div>
               </div>
                 <CommandPanel />
