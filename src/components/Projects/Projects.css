@@ -1,0 +1,72 @@
+/* Carousel.css */
+.project-page {
+    background-color: #303030;
+    color: white;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 2em;
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    /* border-right: 1px solid #ddd; */
+}
+
+.carousel-button {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+.project-image {
+    width: 90%;
+    height: 90%;
+    max-height: 330px;
+}
+
+.arrow {
+    width: 40px;
+}
+
+.project-desc a {
+    padding: 1em 2em;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4em;
+    text-decoration: none;
+}
+
+.project-desc {
+    height: fit-content;
+}

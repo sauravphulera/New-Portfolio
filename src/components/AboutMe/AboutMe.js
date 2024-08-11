@@ -14,13 +14,13 @@ const AboutMe = () => {
                             <img className='circle-image w-100' src={ABOUT.image} alt='profile pic' />
                         <div className='flex space-around mt w-60'>
                             <div title='Linkedin Profile'>
-                                <a target="_blank" href={links.linkedin.url}><img className='icons' src={ABOUT.links.linkedin.icon} /></a>
+                                <a  rel="noreferrer" target="_blank" href={links.linkedin.url}><img alt='linkedin icon' className='icons' src={ABOUT.links.linkedin.icon} /></a>
                             </div>
                             <div title='Github Profile'>
-                                <a target="_blank" href={links.github.url}><img className='icons icon-git' src={links.github.icon} /></a>
+                                <a  rel="noreferrer" target="_blank" href={links.github.url}><img alt='github icon' className='icons icon-git' src={links.github.icon} /></a>
                             </div>
                             <div title='Facebook: This may not work'>
-                                <a target="_blank" href={links.facebook.url}><img className='icons icon-git' src={links.facebook.icon} /></a>
+                                <a  rel="noreferrer" target="_blank" href={links.facebook.url}><img alt='facebook icon' className='icons icon-git' src={links.facebook.icon} /></a>
                             </div>
                         </div>
                     </div>
