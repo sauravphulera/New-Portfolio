@@ -18,9 +18,17 @@
 .space-around {
   justify-content: space-around;
 }
+.space-between {
+  justify-content: space-between;
+}
 .align-end {
   align-items: end;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 
 
 /* margin and paddings */

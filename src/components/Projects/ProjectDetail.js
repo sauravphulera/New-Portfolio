@@ -16,7 +16,7 @@ const ProjectDetail = ({
     return (    
 
         <div className="project-desc">   
-                <h1 className="p-title"> {title }</h1>
+                <h2 className="p-title"> {title }</h2>
                 <div className="mt-2">
                     {isImageReady && <img className="project-image" src={imageUrl} alt="Project" />}
                     {!isImageReady && <div>Loading image....</div>}
