@@ -7,7 +7,7 @@ function Landing() {
         <div className='container flex'>
 
           {/* phone container */}
-            <div className='flex align-end'>
+            <div className='flex align-end phone-container'>
               <div className='phone'>
                   <div className='inner-screen flex align-center flex-col'>
                     <div className='speaker'></div>

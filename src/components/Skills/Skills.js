@@ -9,7 +9,7 @@ export const Skills = () => {
         <div className='mt subtitle'>
             Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.
         </div>
-        <div className='flex flex-wrap jusify-between'>
+        <div className='flex flex-wrap jusify-between skills-container'>
                 {
                   SKILLS.map((skill) => {
                   return(

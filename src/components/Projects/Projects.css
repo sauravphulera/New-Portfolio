@@ -70,3 +70,9 @@
 .project-desc {
     height: fit-content;
 }
+
+@media only screen and (max-width: 600px) {
+    .carousel {
+       margin: 0;
+    }
+  }

@@ -37,3 +37,48 @@
     font-size: 1.2rem;
     -webkit-text-stroke: 0.2px #627175;
 }
+
+@media only screen and (max-width: 600px) {
+    .m__w-100 {
+        width:100%;
+    }
+    .p-6{
+      padding: 6px;
+    }
+    .m__about-me-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        align-items: center;
+    }
+    .m__profile-container {
+        width: 85%;
+    }
+    .m__aboutMe-text-classes {
+        width: calc(100% - 12px);
+    }
+    .m__aboutMe-text-classes p {
+        font-size: 1em;
+        width: 90%
+    }
+    .m__aboutMe-text-classes h1 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .m__aboutMe-text-classes h4 {
+        font-size: 14px !important;
+        /* font-weight: 600; */
+    }
+    .m__aboutMe-text-classes .label {
+        font-size: 12px !important;
+        /* font-weight: 600; */
+    }
+    .m__aboutMe-text-classes .p {
+        padding:2px
+        /* font-weight: 600; */
+    }
+    .m__aboutMe-text-classes .p-2 {
+        padding:2px;
+        /* font-weight: 600; */
+    }
+  }

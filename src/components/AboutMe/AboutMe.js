@@ -7,10 +7,10 @@ const AboutMe = () => {
     const { links } = ABOUT;
     return (
         <div scoped>
-            <section className='about p-6'>
-                <div className='flex justify-center'>
+            <section className='about p-6 m__aboutMe-text-classes'>
+                <div className='flex justify-center m__about-me-container'>
                     {/* profile pic */}
-                    <div className='px-4 py-2 w-40 flex flex-col justify-center align-center'>
+                    <div className='px-4 py-2 w-40 flex flex-col justify-center align-center m__profile-container'>
                             <img className='circle-image w-100' src={ABOUT.image} alt='profile pic' />
                         <div className='flex space-around mt w-60'>
                             <div title='Linkedin Profile'>
@@ -26,7 +26,7 @@ const AboutMe = () => {
                     </div>
 
                     {/* about me */}
-                    <div className='px-4 py-2 w-60'>
+                    <div className='px-4 py-2 w-60 m__w-100'>
                         <h1>About Me</h1>
                         <p className='mt'>
                             {ABOUT.p1.en}

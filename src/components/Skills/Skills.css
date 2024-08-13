@@ -21,3 +21,15 @@
     background-color: rgb(249 250 251);
     margin: 1em;
 }
+@media only screen and (max-width: 600px) {
+    .Skills {
+       padding: 4px;
+       text-align: center;
+    }
+    .Skills .skills-container{
+        justify-content: center;
+     }
+     .Skills .subtitle{
+        font-size: 1em;
+     }
+  }

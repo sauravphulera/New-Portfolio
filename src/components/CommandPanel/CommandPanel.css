@@ -144,3 +144,10 @@ input:focus {
 .terminal-tmux-bar .bar {
     flex-grow: 10;
 }
+
+@media only screen and (max-width: 600px) {
+    .terminal-container {
+        width: 100%;
+        max-width: 100%;
+    }
+  }
