@@ -13,10 +13,10 @@ export const Skills = () => {
                 {
                   SKILLS.map((skill) => {
                   return(
-                      <div className='flex'>
+                      <div key={skill.name + Math.random()} className='flex skill p align-center space-evenly'>
                       
                           <div>
-                            <img src={skill.logo} alt='Skill logo' />
+                            <img className='logo' src={skill.logo} alt='Skill logo' />
                           </div>
                           <div>{skill.name}</div>
                       </div>

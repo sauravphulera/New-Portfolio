@@ -11,3 +11,13 @@
     line-height: 1.75rem;
     color:#303030
 }
+
+.skill img.logo {
+    width: 3rem;
+}
+
+.skill {
+    width: 12rem;
+    background-color: rgb(249 250 251);
+    margin: 1em;
+}
