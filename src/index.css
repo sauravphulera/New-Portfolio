@@ -33,6 +33,9 @@
 }
 
 
+.scroll-y {
+  overflow-y: auto !important;
+}
 
 /* margin and paddings */
 .mt {
