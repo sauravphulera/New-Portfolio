@@ -1,63 +1,110 @@
 
 .landing {
-    background-color: #05092e;
+    background: linear-gradient(160deg, #05092e 0%, #0d1638 40%, #0a0f2e 100%);
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 74, 124, 0.25), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(88, 28, 135, 0.12), transparent);
+    pointer-events: none;
+}
+.landing .container {
+    position: relative;
+    z-index: 1;
+    gap: 2em;
+    align-items: stretch;
+}
+
+.phone-container {
+    align-self: center;
 }
 
 .phone {
-    background: #000;
+    background: linear-gradient(145deg, #1a1a1a 0%, #000 100%);
     width: 20em;
     height: 40em;
     border-radius: 2em;
     display: flex;
     flex-direction: column;
     padding: 1em;
-    box-shadow: 0 .5em .5em .5em rgba(0, 0, 0, .2);
+    box-shadow: 0 2em 4em rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.phone:hover {
+    box-shadow: 0 2.5em 5em rgba(0,0,0,.5), 0 0 40px rgba(45, 74, 124, 0.15);
+    transform: translateY(-4px);
 }
 
 .inner-screen {
     flex-grow: 10;
-    background-color: #eaeaff;
+    background: linear-gradient(180deg, #f8f9fc 0%, #eef0f7 100%);
     border-radius: 1em;
-    padding: 0 1.5em;
+    padding: 1.5em 1.25em;
     position: relative;
+}
+.phone-content {
+    max-width: 100%;
 }
 .speaker {
-    width: 10em;
-    height: 0.5em;
-    background-color: #000;
-    border-radius: 0 0em 1em 1em;
-    display: flex;
+    width: 8em;
+    height: 0.4em;
+    background-color: #1a1a1a;
+    border-radius: 0 0 0.5em 0.5em;
+    margin: 0 auto 0.5em;
 }
 
+.landing-greeting {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.15em;
+}
 
 .title {
-    font-size: 3em;
+    font-size: 2.25em;
     font-weight: 700;
-    margin-bottom: 0;
-    position: relative;
+    margin: 0;
+    color: #0f172a;
+    letter-spacing: -0.02em;
 }
 
 .title:after {
-    position: absolute;
-    content: "";
-    background-color: #2b44ff;
-    height: .15em;
-    width: 50%;
-    top: 1em;
-    left: 0.36em;
+    display: none;
+}
+
+.landing-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+    letter-spacing: 0.02em;
+    margin: 0.25em 0 0;
 }
 
 .programmer-icon {
-    width:9em;
-    height: 9em;
+    width: 8em;
+    height: 8em;
+    object-fit: contain;
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.25;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #475569;
+}
+
+.landing-cta {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.75em 1.5em;
 }
 
 .text-safe-glow {
@@ -81,23 +128,42 @@
   }
 
   .recruitment-notifier {
-    font-size: 2em;
-    color: #fff;
-    /* padding: .5em; */
-  }
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.95);
+    letter-spacing: 0.02em;
+}
 
-  @media only screen and (max-width: 600px) {
-    .container{
-      display: block;
-      padding: 1em;
+.landing .text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+    .landing .container {
+        flex-direction: column;
+        padding: 1em;
+        gap: 1.5em;
     }
     .phone {
-      width: 17em;
-      height: 38em;
+        width: 17em;
+        height: 38em;
     }
     .container .phone-container {
-      justify-content: center;
+        justify-content: center;
     }
-  }
+    .title {
+        font-size: 1.9em;
+    }
+    .landing-greeting {
+        font-size: 0.85rem;
+    }
+    .landing-role {
+        font-size: 0.85rem;
+    }
+}
 
   

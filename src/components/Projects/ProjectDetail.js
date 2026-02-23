@@ -4,22 +4,20 @@ const ProjectDetail = ({
     title, description, url, imageUrl
 }) => {
     const [isImageReady, setImageReady] = useState(false);
+    const imgSrc = imageUrl.startsWith('http') ? imageUrl : `${process.env.PUBLIC_URL || ''}/${imageUrl}`;
     useEffect(() => {
         const img = new Image();
-        img.onload = () => {
-          // when it finishes loading, update the component state
-          setImageReady(true);
-        }
-        img.src = imageUrl; 
-    }, [imageUrl])
+        img.onload = () => setImageReady(true);
+        img.src = imgSrc;
+    }, [imgSrc])
 
     return (    
 
         <div className="project-desc">   
                 <h2 className="p-title"> {title }</h2>
                 <div className="mt-2">
-                    {isImageReady && <img className="project-image" src={imageUrl} alt="Project" />}
-                    {!isImageReady && <div>Loading image....</div>}
+                    {isImageReady && <img className="project-image" src={imgSrc} alt={title} />}
+                    {!isImageReady && <div className="project-image-placeholder">Loading…</div>}
                 </div>
                 <div className="mt-2">
                     {description}

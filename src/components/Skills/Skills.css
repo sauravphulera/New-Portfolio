@@ -1,35 +1,96 @@
+.Skills {
+    padding: 4rem 1.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .Skills h1 {
     color: #05092e;
-    font-family: 'sans-serif';
+    font-family: 'Outfit', sans-serif;
     font-size: 55px;
-    margin-top: 0px;
-    font-weight: 400;
+    margin: 0 0 0.75rem;
+    font-weight: 600;
 }
 
 .Skills .subtitle {
     font-size: 1.25rem;
     line-height: 1.75rem;
-    color:#303030
+    color: #303030;
+    width: 100%;
+    max-width: 100%;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, rgb(255 255 255 / 0.95), rgb(249 250 251));
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
 }
 
 .skill img.logo {
     width: 3rem;
+    height: 3rem;
+    object-fit: contain;
 }
 
-.skill {
-    width: 12rem;
-    background-color: rgb(249 250 251);
-    margin: 1em;
+.skill > div:last-child {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b;
 }
-@media only screen and (max-width: 600px) {
+
+@media (max-width: 600px) {
     .Skills {
-       padding: 4px;
-       text-align: center;
+        padding: 2rem 1rem;
     }
-    .Skills .skills-container{
-        justify-content: center;
-     }
-     .Skills .subtitle{
-        font-size: 1em;
-     }
-  }
+
+    .Skills h1 {
+        font-size: 1.75rem;
+    }
+
+    .Skills .subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+        margin-top: 1.25rem;
+    }
+
+    .skill {
+        padding: 0.6rem 0.5rem;
+        flex-direction: column;
+        min-height: 72px;
+    }
+
+    .skill img.logo {
+        width: 24px;
+        height: 24px;
+    }
+
+    .skill > div:last-child {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}

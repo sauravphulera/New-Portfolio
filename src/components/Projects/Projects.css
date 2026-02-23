@@ -1,7 +1,13 @@
 /* Carousel.css */
 .project-page {
-    background-color: #303030;
+    background: linear-gradient(180deg, #1a1a1e 0%, #252530 50%, #1e1e28 100%);
     color: white;
+    min-height: 100vh;
+}
+.project-page h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 .carousel {
     position: relative;
@@ -9,8 +15,14 @@
     max-width: 700px;
     margin: 2em;
     overflow: hidden;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.06);
+    transition: box-shadow 0.3s ease;
+}
+.carousel:hover {
+    box-shadow: 0 24px 64px rgba(0,0,0,.5);
 }
 
 .carousel-wrapper {
@@ -35,11 +47,12 @@
 
 .carousel-button {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
 .carousel-button:hover {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .carousel-button.prev {
@@ -51,8 +64,10 @@
 }
 .project-image {
     width: 90%;
-    height: 90%;
+    height: auto;
     max-height: 330px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
 
 .arrow {
@@ -60,15 +75,37 @@
 }
 
 .project-desc a {
-    padding: 1em 2em;
-    border: 1px solid white;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border: 2px solid rgba(255,255,255,0.6);
     color: white;
-    border-radius: 4em;
+    border-radius: 2em;
     text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.project-desc a:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: white;
+    transform: translateY(-2px);
+}
+.p-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
 }
 
 .project-desc {
     height: fit-content;
+}
+.project-image-placeholder {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.05);
+    border-radius: 12px;
+    color: rgba(255,255,255,.5);
+    font-size: 0.95rem;
 }
 
 @media only screen and (max-width: 600px) {

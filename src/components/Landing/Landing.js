@@ -12,15 +12,17 @@ function Landing() {
                   <div className='inner-screen flex align-center flex-col'>
                     <div className='speaker'></div>
                     <div className='phone-content text-center'>
-                        <h1 className='title title-font'>Hello! I am a Frontend Developer</h1>
+                        <p className='landing-greeting'>Hello, I'm</p>
+                        <h1 className='title title-font'>Saurav</h1>
+                        <p className='landing-role'>Frontend Developer</p>
                         <div className='mt-2'>
-                          <img className='programmer-icon' src='/programmer.png' alt='programmer logo' />
+                          <img className='programmer-icon' src='/programmer.png' alt='Saurav' />
                         </div>
                         <h2 className='subtitle title-font mt-2'>
-                          Want to build Something?
+                          Want to build something?
                         </h2>
-                        <button className='mt-2 primary-button'>
-                          Lets Connect
+                        <button className='mt-2 primary-button landing-cta' onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+                          Let's Connect
                         </button>
                     </div>
                   </div>
@@ -33,7 +35,7 @@ function Landing() {
 
               <div className='flex align-center'>
                 <div className='circle text-safe-glow blink mr'></div>
-                <div className='text-white recruitment-notifier'>Still Looking</div>
+                <div className='text-white recruitment-notifier'>Open to opportunities</div>
               </div>
                 <CommandPanel />
             </div>

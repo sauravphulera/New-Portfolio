@@ -4,24 +4,21 @@ import { SKILLSDATA } from '../../data';
 export const Skills = () => {
     const SKILLS = [...SKILLSDATA];
   return (
-    <div className='p-4 Skills'>
+    <div className='Skills'>
         <h1>Skills</h1>
-        <div className='mt subtitle'>
+        <div className='subtitle'>
             Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.
         </div>
-        <div className='flex flex-wrap jusify-between skills-container'>
+        <div className='skills-container'>
                 {
-                  SKILLS.map((skill) => {
-                  return(
-                      <div key={skill.name + Math.random()} className='flex skill p align-center space-evenly'>
-                      
+                  SKILLS.map((skill) => (
+                      <div key={skill.name} className='skill'>
                           <div>
-                            <img className='logo' src={skill.logo} alt='Skill logo' />
+                            <img className='logo' src={skill.logo} alt={`${skill.name} logo`} />
                           </div>
                           <div>{skill.name}</div>
                       </div>
-                      )
-                    })
+                    ))
                 }
           </div>
     </div>

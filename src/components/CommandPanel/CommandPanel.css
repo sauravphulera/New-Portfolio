@@ -1,10 +1,14 @@
 .terminal-container {
-    background: #0a1704;
+    background: #0d1f0d;
     border-radius: 1em;
-    box-shadow: 0 .5em 1em 1em rgba(0, 0, 0, .5);
+    box-shadow: 0 1em 2em rgba(0, 0, 0, .4), 0 0 0 1px rgba(0,255,0,.06);
     font-family: monaco, Consolas, Lucida Console, monospace;
     width: 40vw;
     max-width: 40vw;
+    transition: box-shadow 0.3s ease;
+}
+.terminal-container:hover {
+    box-shadow: 0 1.25em 2.5em rgba(0, 0, 0, .5), 0 0 30px rgba(0,255,0,.08);
 }
 .terminal-header {
     background: #000;
@@ -34,14 +38,24 @@
 }
 
 .terminal-body {
-    padding: 1em;
-    color: #0d339d;
-    height: 50vh;
-    min-height: 30em;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: #7dd3fc;
+}
+
+.terminal-scroll {
+    flex: 0 0 auto;
+    padding: 1.25em 1.25em 0.75em;
+    overflow: visible;
+}
+.terminal-intro {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(125, 211, 252, 0.2);
 }
 .terminal-body .has-text-weight-bold {
-    color: #1142cc;
+    color: #93c5fd;
     font-weight: 600;
 }
 .is-rainbow-red {
@@ -71,7 +85,9 @@ li:not(:last-child) {
     margin-bottom: 1em;  
 }
 .terminal-control {
-    color: #0d339d;
+    flex: 0 0 auto;
+    color: #7dd3fc;
+    padding: 0.75em 1.25em 1em;
 }
 .control {
     box-sizing: border-box;
@@ -101,26 +117,38 @@ li:not(:last-child) {
     top: .25em;
     /* left: 1em; */
 }
+.terminal-control {
+    border-top: 1px solid rgba(125, 211, 252, 0.2);
+}
+
+.form {
+    width:calc(100% - 4em);
+}
 .input {
     background: transparent;
     border: none;
     padding-top: 0;
     padding-left: 1em;
     font-family: monaco, Consolas, Lucida Console, monospace;
-    color: #0d339d;
-    caret-color: transparent;
-    width:calc(100% - 4em);
+    color: white;
+    caret-color: white;
     height:3em;
+    width:100%;
+    transition: box-shadow 0.2s ease;
+}
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 51, 157, 0.4);
 }
 input:focus {
     outline: none;
 }
 .terminal-tmux-bar {
-    background: #3d65d3;
+    background: #1e3a5f;
     border-radius: 0 0 1em 1em;
     display: flex;
     flex-direction: row;
-    color: #0d339d;
+    color: rgba(255,255,255,0.9);
     font-size: .8em;
 }
 
@@ -132,10 +160,10 @@ input:focus {
     padding: .5em;
 }
 .terminal-tmux-bar .name, .terminal-tmux-bar .screen {
-    background: #f45bee;
+    background: #3b82f6;
 }
 .terminal-tmux-bar .battery {
-    background: #0a1704;
+    background: #0d1f0d;
 }
 .terminal-tmux-bar .name {
     border-bottom-right-radius: 1em;
@@ -145,9 +173,88 @@ input:focus {
     flex-grow: 10;
 }
 
+.terminal-hint {
+    font-size: 0.85em;
+    margin-top: 0.5em;
+    color: #86efac;
+}
+
+.terminal-chat {
+    margin-top: 0;
+}
+
+.terminal-msg {
+    margin-bottom: 0.85em;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.terminal-msg-prefix {
+    margin-right: 0.5em;
+    color: #60a5fa;
+}
+
+.terminal-msg--user .terminal-msg-text {
+    color: #bae6fd;
+}
+
+.terminal-msg--assistant .terminal-msg-text {
+    color: #86efac;
+}
+
+.terminal-msg--assistant .terminal-msg-text p {
+    margin: 0.4em 0;
+}
+.terminal-msg--assistant .terminal-msg-text p:first-child {
+    margin-top: 0;
+}
+.terminal-msg--assistant .terminal-msg-text p:last-child {
+    margin-bottom: 0;
+}
+
+.terminal-typing {
+    opacity: 0.85;
+}
+
+.terminal-error {
+    color: #fca5a5;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    padding: 0.6em 0.75em;
+    background: rgba(220, 38, 38, 0.15);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    border-radius: 6px;
+}
+
 @media only screen and (max-width: 600px) {
     .terminal-container {
         width: 100%;
         max-width: 100%;
     }
-  }
+    .terminal-intro {
+        padding-bottom: 0.6em;
+        margin-bottom: 0.6em;
+    }
+    .terminal-intro ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35em;
+    }
+    .terminal-intro li {
+        margin-bottom: 0;
+        font-size: 0.85em;
+    }
+    .terminal-scroll {
+        padding: 1em 1em 0.5em;
+    }
+    .terminal-control {
+        padding: 0.85em 1em 1em;
+    }
+    .input {
+        min-height: 2.75em;
+        font-size: 16px;
+    }
+    .terminal-msg {
+        margin-bottom: 0.5em;
+    }
+}

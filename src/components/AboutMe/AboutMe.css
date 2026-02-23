@@ -1,84 +1,163 @@
+.about {
+    background: linear-gradient(180deg, #f0f2fb 0%, #e8ebf8 100%);
+    padding: 4rem 1.5rem;
+}
+
+.about-inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-profile {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-wrap {
+    position: relative;
+}
+
 .circle-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 50%;
-    max-width: 300px;
+    box-shadow: 0 8px 24px rgba(5, 9, 46, 0.1);
 }
-.icons {
-    width: 3em;
-    height: 3em;
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
 }
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(5, 9, 46, 0.06);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background: rgba(5, 9, 46, 0.12);
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.icon-email {
+    font-size: 1.25rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .about h1 {
     color: #05092e;
-    font-weight: 100;
-    font-size: 65px;
-    margin: 0;
-}
-.about p {
-    color: #61707b;
-    font-size: 21px;
-    letter-spacing: 0px;
-    word-spacing: 0.5em;
-}
-
-.about {
-    background-color: #eaeaff;
-}
-.hr-line {
-    border-bottom: 1px solid #cccccc;
-}
-
-.about .data {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
     font-size: 2.5rem;
-    color: #009ca8;
-    margin: 0;
-    font-weight: 400;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
 }
 
-.about .label {
-    font-size: 1.2rem;
-    -webkit-text-stroke: 0.2px #627175;
+.about-text p {
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
 }
 
-@media only screen and (max-width: 600px) {
-    .m__w-100 {
-        width:100%;
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(5, 9, 46, 0.08);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #0d9488;
+    font-family: 'Outfit', sans-serif;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 700px) {
+    .about {
+        padding: 2.5rem 1rem;
     }
-    .p-6{
-      padding: 6px;
-    }
-    .m__about-me-container {
-        display: flex;
+
+    .about-inner {
         flex-direction: column;
-        padding: 1em;
         align-items: center;
+        gap: 2rem;
     }
-    .m__profile-container {
-        width: 85%;
+
+    .about-profile {
+        order: 1;
     }
-    .m__aboutMe-text-classes {
-        width: calc(100% - 12px);
+
+    .about-text {
+        order: 2;
+        text-align: center;
+        max-width: 90%;
     }
-    .m__aboutMe-text-classes p {
-        font-size: 1em;
-        width: 90%
+
+    .about h1 {
+        font-size: 1.75rem;
     }
-    .m__aboutMe-text-classes h1 {
-        font-size: 18px;
-        font-weight: 600;
+
+    .about-text p {
+        font-size: 1rem;
     }
-    .m__aboutMe-text-classes h4 {
-        font-size: 14px !important;
-        /* font-weight: 600; */
+
+    .circle-image {
+        width: 160px;
+        height: 160px;
     }
-    .m__aboutMe-text-classes .label {
-        font-size: 12px !important;
-        /* font-weight: 600; */
+
+    .social-links {
+        margin-top: 1rem;
     }
-    .m__aboutMe-text-classes .p {
-        padding:2px
-        /* font-weight: 600; */
+
+    .about-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
     }
-    .m__aboutMe-text-classes .p-2 {
-        padding:2px;
-        /* font-weight: 600; */
-    }
-  }
+}

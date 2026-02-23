@@ -1,6 +1,6 @@
 export const ABOUT = {
     p1: {
-        en: 'I am a front end developer with 5+  years of relevant work experience  including demonstrated experience in designing data visualization and analytical interfaces or applications.I have built all aspects of the user experience and user interface for client-facing landing pages. Specializes in using html, css , javascript, React (functional and class components), Vue2 and vue3, Nextjs, Graphql, Angular (all versions from js to 17+),  and some advanced  javascript libraries like D3.js, highcharts to build user friendly UI for product based organizations.'
+        en: 'I am a front-end developer with 5+ years of experience in data visualization and analytical interfaces. I build client-facing landing pages and user interfaces for product teams. I specialize in React, Vue, Next.js, Angular, GraphQL, D3.js, and Highcharts to create user-friendly UIs.'
     },
     p2: {
         en: ''
@@ -76,7 +76,7 @@ export const PROJECTS = [
 ];
 
 export const SKILLSDATA =  [
-    { name: 'C Language', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg'}, 
+    { name: 'C Language', logo: 'https://tse2.mm.bing.net/th/id/OIP.qZMIMShj-fclHYOaH1OBFAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'}, 
     { name: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg'}, 
     { name: 'TypeScript', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'}, 
     { name: 'Express', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg'}, 
@@ -85,7 +85,7 @@ export const SKILLSDATA =  [
     { name: 'Redux', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg'},
     { name: 'Sass', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg'},
     { name: 'Javascript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'},
-    {name: 'Angular', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'},
+    {name: 'Angular', logo: 'https://tse2.mm.bing.net/th/id/OIP.f3G22dIK_vza8YSby6jPbQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3'},
     {name: 'Vue', logo: 'https://masteringjs.io/assets/images/vue/vue-transparent.png'},
     {name: 'Nextjs', logo: 'https://cdn.worldvectorlogo.com/logos/next-js.svg'},
     {name: 'Tailwind CSS', logo: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg'},
